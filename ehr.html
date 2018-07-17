@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+个人健康管理平台
+name:<input type="text" id="name" name="name" value="">
+收缩压：<input type="text" id="blood_1" name="blood_1" value="" />
+舒展压：<input type="text" id="blood_2" name="blood_2" value="" />
+<input type="button" id="ok" name="ok" value="保存"/ onclick="saveData()">
+<script type="text/javascript">
+if(window.localStorage["name"]!=""){
+	document.getElementById("name").value=window.localStorage["name"];
+	document.getElementById("blood_1").value=window.localStorage["blood_1"];
+		document.getElementById("blood_2").value=window.localStorage["blood_2"];	
+}
+function saveData(){
+	var name=document.getElementById("name").value;
+	var blood_1=document.getElementById("blood_1").value;
+	var blood_2=document.getElementById("blood_2").value;
+	alert(name+"|"+blood_1+"|"+blood_2);
+	window.localStorage["name"]=name;
+	window.localStorage["blood_1"]=blood_1;
+	window.localStorage["blood_2"]=blood_2;
+}
+</script>

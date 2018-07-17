@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<body>
+用户注册<br/>
+错误提示区：<div id="div_1"></div>
+<form id="form_1" method="POST">
+姓名：<input type="text" id="name" name="name" value="" /><br/>
+电话：<input type="text" id="phone" name="phone" value="" /><br/>
+密码1：<input type="password" id="password_1" value="" /><br/>
+密码2：<input type="password" id="password_2" value="" onblur="checkPassword()"/><br/>
+<input type="submit" id="ok" name="ok" value="提交">
+</form>
+</body>
+<script type="text/javascript">
+	function checkPassword(){
+		if(document.getElementById("password_1").value!=documen.getElementById("password_2").value){
+			document.getElementById("div_1").innerHTML="error";
+		}
+		document.getElementById("div_1").innerHTML="";
+	}
+</script>

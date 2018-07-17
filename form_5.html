@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<body>
+<form method="POST" action="">
+姓名：<input id="name" name="name" value="" onkeyup="myCopy()"/>
+显示：<input id="show" name="name" value=""/>
+</form>
+</body>
+<script type="text/javascript">
+	function myCopy(){
+		var obj_one=document.getElementById("name")
+                     var obj_two=document.getElementById("show")
+                     obj_two.value=obj_one.value
+	}
+</script>

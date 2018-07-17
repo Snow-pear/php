@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<body>
+姓名：<input type="text" id="name" name="name" value=""/><br/>
+性别：<input type="radio" id="male" name="gender" value="01"/>男
+     <input type="radio" id="female" name="gender" value="02"/>女 <br/>
+<div id="div_1"></div>
+</body>
+<script type="text/javascript">
+function welcome(){
+	var name=document.getElementById("name").value;
+	var gender=document.getElementById("male");
+		if(gender.checked){
+			document.getElementById("div_1").innerHTML="欢迎"+name+"先生";
+		}else{
+			document.getElementById("div_1").innerHTML="欢迎"+name+"女士";
+			}
+}
+</script>
